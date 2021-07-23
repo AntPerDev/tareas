@@ -28,8 +28,11 @@ export const todoList = new TodoList();
 //   localStorage.removeItem('mi-key');
 // }, 1500);
 
+todoList.todos[0].imprimirClase();
 
-console.log(todoList.todos);
 
 // todoList.todos.forEach(todo  => crearTodoHtml(todo));
 todoList.todos.forEach(crearTodoHtml);
+
+
+console.log('todos',todoList.todos);
