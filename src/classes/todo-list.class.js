@@ -33,7 +33,7 @@ export class TodoList {
   marcarCompletado(id) {
     for (const todo of this.todos) {
 
-      console.log(id, todo.id);
+      // console.log(id, todo.id);
 
       if (todo.id == id) {
         todo.completado = !todo.completado;

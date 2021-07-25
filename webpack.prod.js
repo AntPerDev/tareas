@@ -7,16 +7,16 @@ const { CleanWebpackPlugin }  = require('clean-webpack-plugin');
 module.exports = {
     mode: 'production',
     optimization: {
-        minimizer: [ new OptimizeCssAssetsPlugin() ]
+        minimizer: [ new OptimizeCssAssetsPlugin()],
     },
     output: {
         filename: 'main.[contentHash].js'
     },
     module: {
         rules: [
-            { 
-                test: /\.js$/, 
-                exclude: /node_modules/, 
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
                 use: [
                     'babel-loader'
                 ]
@@ -41,7 +41,7 @@ module.exports = {
                 use: [
                     {
                         loader: 'html-loader',
-                        options: { minimize: false }
+                        options: { minimize: true }
                     }
                 ]
             },
@@ -61,8 +61,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: './src/index.html',
-            filename: './index.html'
+            filename: './index.html',
+            template: './src/index.html'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contentHash].css',

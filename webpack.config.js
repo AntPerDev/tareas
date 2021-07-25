@@ -7,11 +7,11 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = {
     mode: 'development',
     optimization: {
-        minimizer: [new OptimizeCssAssetsPlugin()]
+        minimizer: [new OptimizeCssAssetsPlugin()],
+
     },
     module: {
         rules: [
-            
             {
                 test: /\.css$/,
                 exclude: /styles\.css$/,
@@ -52,8 +52,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
+            filename: './index.html',
             template: './src/index.html',
-            filename: './index.html'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',

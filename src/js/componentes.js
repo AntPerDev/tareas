@@ -39,7 +39,7 @@ txtInput.addEventListener('keyup', (event) => {
     if (event.keyCode === 13 && txtInput.value.length > 0) {
 
 
-        console.log(txtInput.value)
+        // console.log(txtInput.value)
 
         const nuevoTodo = new Todo(txtInput.value);
 
@@ -92,7 +92,7 @@ btnBorrar.addEventListener('click', () =>{
     for(let i = divTodoList.children.length-1;i>=0;i--){
         const elemento = divTodoList.children[i];
 
-        console.log(elemento);
+        // console.log(elemento);
 
         if(elemento.classList.contains('completed')){
             divTodoList.removeChild(elemento);
